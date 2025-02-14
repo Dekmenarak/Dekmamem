@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DekHim</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- เพิ่ม ID ให้กับแท็ก audio -->
+    <audio id="audio" loop>
+        <source src="YENTED - หินหยดลงน้ำ (adore) _ Unkle T's Cabin.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <img src="baby.jpg.PNG" alt="@ttaatann_" class="letter-image">
+                        <strong></strong>
+                        <p>
+                            Every love song is about you. <br>
+                            Happy Valentine’s Day! 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <script>
+        // เพิ่มฟังก์ชันที่เล่นเสียงเมื่อมีการคลิกที่หน้าเว็บ
+        const audio = document.getElementById('audio');
+        
+        // ใช้คลิกที่หน้าเว็บเพื่อเล่นเสียง
+        document.body.addEventListener('click', () => {
+            audio.play();
+        });
+
+        // ฟังก์ชันเปิด/ปิดการเปิดจดหมาย
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>
